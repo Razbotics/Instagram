@@ -3,16 +3,12 @@ import {View, StyleSheet} from 'react-native';
 import AppText from './AppText';
 import ProfilePicture from './ProfilePicture';
 
-function Story({name, imgUri}) {
-  const getTruncName = () => {
-    return name.length > 10 ? name.slice(0, 10) + '...' : name;
-  };
-
+function Story({name, imgUri, ...otherProps}) {
   return (
     <View style={styles.container}>
-      <ProfilePicture uri={imgUri} />
+      <ProfilePicture uri={imgUri} {...otherProps} />
       <View style={styles.textContainer}>
-        <AppText style={styles.text}>{getTruncName()}</AppText>
+        <AppText style={styles.text}>{name}</AppText>
       </View>
     </View>
   );

@@ -9,4 +9,5 @@ export default {
   lightGray: '#c7c7c7',
   orange: '#f07f16',
   transparent: '#ffffff00',
+  blue: '#4287f5',
 };
