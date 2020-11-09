@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, TouchableWithoutFeedback} from 'react-native';
 import AppText from './AppText';
 import ProfilePicture from './ProfilePicture';
 
@@ -16,7 +16,7 @@ function Story({name, imgUri, ...otherProps}) {
 
 const styles = StyleSheet.create({
   container: {
-    marginRight: 10,
+    marginRight: 14,
     justifyContent: 'center',
     alignItems: 'center',
   },

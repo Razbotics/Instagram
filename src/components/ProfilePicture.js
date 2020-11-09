@@ -1,14 +1,21 @@
 import React from 'react';
-import {View, StyleSheet, Image, Text} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Image,
+  Text,
+  TouchableWithoutFeedback,
+} from 'react-native';
 import colors from '../constants/colors';
 import {width} from '../constants/dimension';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 function ProfilePicture({
   uri,
-  imageScale = 0.15,
+  imageScale = 0.13,
   borderType = 'orange',
   showIcon = false,
+  onPress,
 }) {
   const styles = getStyle({
     imageScale,
@@ -17,12 +24,14 @@ function ProfilePicture({
 
   return (
     <View style={styles.container}>
-      <Image
-        style={styles.image}
-        source={{
-          uri,
-        }}
-      />
+      <TouchableWithoutFeedback onPress={onPress}>
+        <Image
+          style={styles.image}
+          source={{
+            uri,
+          }}
+        />
+      </TouchableWithoutFeedback>
       {showIcon && (
         <View style={styles.addStory}>
           <Text>
@@ -40,7 +49,7 @@ function ProfilePicture({
 
 const getStyle = ({imageScale, borderColor}) => {
   const imageDim = width * imageScale;
-  const borderScale = 1.1;
+  const borderScale = 1.2;
   const addBtnScale = 0.3;
 
   return StyleSheet.create({
@@ -48,8 +57,9 @@ const getStyle = ({imageScale, borderColor}) => {
       width: imageDim * borderScale,
       height: imageDim * borderScale,
       borderRadius: (imageDim * borderScale) / 2,
-      padding: imageDim * 0.035,
-      borderWidth: imageDim * 0.02,
+      borderWidth: imageDim * 0.04,
+      justifyContent: 'center',
+      alignItems: 'center',
       borderColor,
     },
     image: {

@@ -54,12 +54,14 @@ function StoriesBar() {
           imgUri={selfProfile.imgUri}
           showIcon={true}
           borderType="transparent"
+          onPress={() => console.log('pressed your story')}
         />
         {stories.map((story) => (
           <Story
             key={story.id}
             name={getTruncName(story.name)}
             imgUri={story.imgUri}
+            onPress={() => console.log('pressed', story.name)}
           />
         ))}
       </ScrollView>
