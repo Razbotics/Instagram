@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {StatusBar, View, StyleSheet} from 'react-native';
 import colors from '../constants/colors';
+import NavigationBar from 'react-native-navbar-color';
 
 function Screen({children, style}) {
+  useEffect(() => {
+    NavigationBar.setColor(colors.black);
+  }, []);
+
   return (
     <>
       <StatusBar backgroundColor={colors.black} />

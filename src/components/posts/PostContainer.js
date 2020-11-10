@@ -1,14 +1,16 @@
 import React from 'react';
-import {View, StyleSheet, TouchableWithoutFeedback} from 'react-native';
+import {View, StyleSheet} from 'react-native';
+import PostFooter from './PostFooter';
 import PostHeader from './PostHeader';
+import PostImage from './PostImage';
 
 function PostContainer({profileUri, name, postUris}) {
   return (
-    <TouchableWithoutFeedback onPress={() => console.log(name)}>
-      <View style={styles.container}>
-        <PostHeader imageUrl={profileUri} name={name} />
-      </View>
-    </TouchableWithoutFeedback>
+    <View style={styles.container}>
+      <PostHeader imageUrl={profileUri} name={name} />
+      <PostImage imageUris={postUris} />
+      <PostFooter />
+    </View>
   );
 }
 

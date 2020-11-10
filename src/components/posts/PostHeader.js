@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, TouchableWithoutFeedback} from 'react-native';
 import ProfilePicture from '../ProfilePicture';
 import AppText from '../AppText';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -15,9 +15,11 @@ function PostHeader({imageUrl, name}) {
           borderType="transparent"
         />
       </View>
-      <View style={styles.name}>
-        <AppText style={{fontSize: 12}}>{name}</AppText>
-      </View>
+      <TouchableWithoutFeedback onPress={() => console.log(name)}>
+        <View style={styles.name}>
+          <AppText style={{fontSize: 13, fontWeight: 'bold'}}>{name}</AppText>
+        </View>
+      </TouchableWithoutFeedback>
       <View style={styles.menu}>
         <Icon name="dots-vertical" size={25} color={colors.white} />
       </View>
