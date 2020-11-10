@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, StyleSheet, TouchableWithoutFeedback} from 'react-native';
-import AppText from './AppText';
-import ProfilePicture from './ProfilePicture';
+import {View, StyleSheet} from 'react-native';
+import AppText from '../AppText';
+import ProfilePicture from '../ProfilePicture';
 
 function Story({name, imgUri, ...otherProps}) {
   return (

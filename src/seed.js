@@ -1,14 +1,10 @@
-import React from 'react';
-import {View, StyleSheet, ScrollView} from 'react-native';
-import Story from './Story';
-
-const selfProfile = {
+export const selfProfile = {
   name: '__shubho__',
   imgUri:
     'https://instagram.fbom2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/119048819_378097930252595_7271537768545590772_n.jpg?_nc_ht=instagram.fbom2-1.fna.fbcdn.net&_nc_ohc=9C9bazw4esMAX_Cr6vd&oh=aff1580df463bb4bfcff5ff6a29de645&oe=5FD33C10',
 };
 
-const stories = [
+export const stories = [
   {
     id: 2,
     name: 'sstable__genius',
@@ -40,42 +36,3 @@ const stories = [
       'https://instagram.fbom2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/79377624_722982318231761_871827285336915968_n.jpg?_nc_ht=instagram.fbom2-1.fna.fbcdn.net&_nc_ohc=BQVz2QVWHBUAX9yyBg-&_nc_tp=25&oh=766e45c26d2cf5950d0cf751ffae1e0c&oe=5FD36188',
   },
 ];
-
-const getTruncName = (name) => {
-  return name.length > 10 ? name.slice(0, 8) + '...' : name;
-};
-
-function StoriesBar() {
-  return (
-    <View style={styles.container}>
-      <ScrollView horizontal>
-        <Story
-          name="Your story"
-          imgUri={selfProfile.imgUri}
-          showIcon={true}
-          borderType="transparent"
-          onPress={() => console.log('pressed your story')}
-        />
-        {stories.map((story) => (
-          <Story
-            key={story.id}
-            name={getTruncName(story.name)}
-            imgUri={story.imgUri}
-            onPress={() => console.log('pressed', story.name)}
-          />
-        ))}
-      </ScrollView>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    width: '100%',
-    flexDirection: 'row',
-    marginTop: 10,
-    padding: 5,
-  },
-});
-
-export default StoriesBar;

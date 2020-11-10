@@ -34,13 +34,11 @@ function ProfilePicture({
       </TouchableWithoutFeedback>
       {showIcon && (
         <View style={styles.addStory}>
-          <Text>
-            <Icon
-              name="plus"
-              size={styles.addStory.width * 0.9}
-              color={colors.white}
-            />
-          </Text>
+          <Icon
+            name="plus"
+            size={styles.addStory.width * 0.9}
+            color={colors.white}
+          />
         </View>
       )}
     </View>
@@ -77,6 +75,8 @@ const getStyle = ({imageScale, borderColor}) => {
       borderColor: colors.black,
       borderWidth: 1,
       backgroundColor: colors.blue,
+      justifyContent: 'center',
+      alignItems: 'center',
     },
   });
 };

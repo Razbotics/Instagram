@@ -1,6 +1,7 @@
 import React from 'react';
 import HomeHeader from '../components/HomeHeader';
-import StoriesBar from '../components/StoriesBar';
+import Post from '../components/posts/Post';
+import StoriesBar from '../components/stories/StoriesBar';
 import Screen from './Screen';
 
 function HomeScreen({}) {
@@ -8,6 +9,7 @@ function HomeScreen({}) {
     <Screen>
       <HomeHeader />
       <StoriesBar />
+      <Post />
     </Screen>
   );
 }

@@ -8,11 +8,7 @@ function HomeHeader({}) {
     <View style={styles.container}>
       <View style={styles.camera}>
         <TouchableWithoutFeedback onPress={() => console.log('pressed camera')}>
-          <Icon
-            name="camera"
-            size={styles.container.height * 0.6}
-            color={colors.white}
-          />
+          <Icon name="camera" size={25} color={colors.white} />
         </TouchableWithoutFeedback>
       </View>
       <Image
@@ -21,11 +17,7 @@ function HomeHeader({}) {
       />
       <View style={styles.dm}>
         <TouchableWithoutFeedback onPress={() => console.log('pressed dm')}>
-          <Icon
-            name="send"
-            size={styles.container.height * 0.6}
-            color={colors.white}
-          />
+          <Icon name="send" size={25} color={colors.white} />
         </TouchableWithoutFeedback>
       </View>
     </View>
@@ -37,15 +29,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: colors.dark,
     width: '100%',
-    height: 45,
+    height: 50,
     alignItems: 'center',
-    padding: 5,
   },
   logo: {
     marginLeft: 10,
-    marginTop: 2,
+    marginTop: 8,
     width: '22%',
-    height: 45 * 0.6,
+    height: 50 * 0.6,
   },
   camera: {
     marginLeft: 5,
@@ -53,6 +44,7 @@ const styles = StyleSheet.create({
   dm: {
     flex: 1,
     alignItems: 'flex-end',
+    marginRight: 5,
   },
 });
 
