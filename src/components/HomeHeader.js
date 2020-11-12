@@ -2,12 +2,14 @@ import React from 'react';
 import {View, StyleSheet, Image, TouchableWithoutFeedback} from 'react-native';
 import colors from '../constants/colors';
 import Icon from 'react-native-vector-icons/Feather';
+import routes from '../navigation/routes';
 
-function HomeHeader({}) {
+function HomeHeader({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.camera}>
-        <TouchableWithoutFeedback onPress={() => console.log('pressed camera')}>
+        <TouchableWithoutFeedback
+          onPress={() => navigation.navigate(routes.CAMERA)}>
           <Icon name="camera" size={25} color={colors.white} />
         </TouchableWithoutFeedback>
       </View>
@@ -15,8 +17,9 @@ function HomeHeader({}) {
         style={styles.logo}
         source={require('../assets/images/logo-white.png')}
       />
-      <View style={styles.dm}>
-        <TouchableWithoutFeedback onPress={() => console.log('pressed dm')}>
+      <View style={styles.chats}>
+        <TouchableWithoutFeedback
+          onPress={() => navigation.navigate(routes.CHAT)}>
           <Icon name="send" size={25} color={colors.white} />
         </TouchableWithoutFeedback>
       </View>
@@ -41,7 +44,7 @@ const styles = StyleSheet.create({
   camera: {
     marginLeft: 5,
   },
-  dm: {
+  chats: {
     flex: 1,
     alignItems: 'flex-end',
     marginRight: 5,
