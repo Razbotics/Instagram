@@ -10,17 +10,19 @@ function HomeHeader({navigation}) {
       <View style={styles.camera}>
         <TouchableWithoutFeedback
           onPress={() => navigation.navigate(routes.CAMERA)}>
-          <Icon name="camera" size={25} color={colors.white} />
+          <Icon name="camera" size={30} color={colors.white} />
         </TouchableWithoutFeedback>
       </View>
-      <Image
-        style={styles.logo}
-        source={require('../assets/images/logo-white.png')}
-      />
+      <View style={styles.logoContainer}>
+        <Image
+          style={styles.logo}
+          source={require('../assets/images/logo-white.png')}
+        />
+      </View>
       <View style={styles.chats}>
         <TouchableWithoutFeedback
           onPress={() => navigation.navigate(routes.CHAT)}>
-          <Icon name="send" size={25} color={colors.white} />
+          <Icon name="send" size={30} color={colors.white} />
         </TouchableWithoutFeedback>
       </View>
     </View>
@@ -32,22 +34,29 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: colors.dark,
     width: '100%',
-    height: 50,
+    height: 60,
     alignItems: 'center',
   },
+  logoContainer: {
+    flex: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   logo: {
-    marginLeft: 10,
-    marginTop: 8,
-    width: '22%',
-    height: 50 * 0.6,
+    width: 100,
+    height: 40,
   },
   camera: {
+    flex: 1,
     marginLeft: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   chats: {
     flex: 1,
-    alignItems: 'flex-end',
     marginRight: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 
