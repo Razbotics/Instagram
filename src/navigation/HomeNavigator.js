@@ -25,7 +25,7 @@ const HomeNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Reels"
+        name="Reel"
         component={ReelsScreen}
         options={{
           tabBarIcon: ({color, size}) => (
