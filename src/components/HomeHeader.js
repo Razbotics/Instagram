@@ -7,12 +7,6 @@ import routes from '../navigation/routes';
 function HomeHeader({navigation}) {
   return (
     <View style={styles.container}>
-      <View style={styles.camera}>
-        <TouchableWithoutFeedback
-          onPress={() => navigation.navigate(routes.CAMERA)}>
-          <Icon name="camera" size={30} color={colors.white} />
-        </TouchableWithoutFeedback>
-      </View>
       <View style={styles.logoContainer}>
         <Image
           style={styles.logo}
@@ -32,25 +26,19 @@ function HomeHeader({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    backgroundColor: colors.dark,
+    backgroundColor: colors.black,
     width: '100%',
-    height: 60,
+    height: 70,
     alignItems: 'center',
   },
   logoContainer: {
     flex: 5,
-    alignItems: 'center',
+    paddingLeft: 10,
     justifyContent: 'center',
   },
   logo: {
-    width: 100,
-    height: 40,
-  },
-  camera: {
-    flex: 1,
-    marginLeft: 5,
-    alignItems: 'center',
-    justifyContent: 'center',
+    width: 120,
+    height: 48,
   },
   chats: {
     flex: 1,

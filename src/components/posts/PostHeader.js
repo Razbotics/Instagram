@@ -35,14 +35,14 @@ const styles = StyleSheet.create({
   },
   image: {
     flexBasis: '10%',
-    marginLeft: 10,
-    marginRight: 20,
+    marginLeft: 5,
+    marginRight: 15,
   },
   name: {
     flexBasis: '70%',
   },
   menu: {
-    flexBasis: '15%',
+    flexBasis: '20%',
     justifyContent: 'center',
     alignItems: 'center',
   },

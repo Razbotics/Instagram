@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, StyleSheet, FlatList} from 'react-native';
 import PostContainer from './PostContainer';
 import {getUserFeeds} from '../../api/feeds';
 import StoriesBar from '../stories/StoriesBar';
 
 function Post() {
+  const [refreshing, setRefreshing] = useState(false);
   const userFeeds = getUserFeeds();
 
   return (
@@ -19,8 +20,13 @@ function Post() {
             profileUri={item.profileUri}
             name={item.userName}
             postUris={item.postUris}
+            postLikes={item.postLikes}
           />
         )}
+        refreshing={refreshing}
+        onRefresh={() => {
+          setRefreshing(false);
+        }}
       />
     </View>
   );

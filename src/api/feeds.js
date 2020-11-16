@@ -39,5 +39,6 @@ export const getUserFeeds = () =>
       userName: user.userName,
       profileUri: user.profileUri,
       postUris: post.postUris,
+      postLikes: post.likes,
     };
   });

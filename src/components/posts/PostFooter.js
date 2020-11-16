@@ -3,9 +3,10 @@ import {View, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import IconFeather from 'react-native-vector-icons/Feather';
 import colors from '../../constants/colors';
+import AppText from '../AppText';
 
-function PostFooter({}) {
-  const size = 32;
+function PostFooter({likes = 0, isLiked}) {
+  const size = 28;
   return (
     <View style={styles.container}>
       <View style={styles.icons}>
@@ -21,6 +22,9 @@ function PostFooter({}) {
         <View style={styles.bookmark}>
           <Icon name="bookmark-outline" size={size} color={colors.white} />
         </View>
+      </View>
+      <View style={styles.likeContainer}>
+        <AppText>{likes} Likes</AppText>
       </View>
     </View>
   );
@@ -47,6 +51,12 @@ const styles = StyleSheet.create({
   bookmark: {
     flex: 1,
     alignItems: 'flex-end',
+  },
+  likeContainer: {
+    width: '100%',
+    height: 20,
+    paddingLeft: 15,
+    justifyContent: 'center',
   },
 });
 
