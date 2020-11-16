@@ -35,10 +35,11 @@ const styles = StyleSheet.create({
   },
   image: {
     flexBasis: '10%',
-    marginRight: 15,
+    marginLeft: 10,
+    marginRight: 20,
   },
   name: {
-    flexBasis: '75%',
+    flexBasis: '70%',
   },
   menu: {
     flexBasis: '15%',

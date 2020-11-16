@@ -10,6 +10,8 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 const Tab = createBottomTabNavigator();
 
 const HomeNavigator = () => {
+  const size = 30;
+
   return (
     <Tab.Navigator
       initialRouteName="Home"
@@ -19,7 +21,7 @@ const HomeNavigator = () => {
         name="Home"
         component={HomeScreen}
         options={{
-          tabBarIcon: ({color, size}) => (
+          tabBarIcon: ({color}) => (
             <Icon name="home" color={color} size={size} />
           ),
         }}
@@ -28,7 +30,7 @@ const HomeNavigator = () => {
         name="Reel"
         component={ReelsScreen}
         options={{
-          tabBarIcon: ({color, size}) => (
+          tabBarIcon: ({color}) => (
             <Icon name="play-box-multiple" color={color} size={size} />
           ),
         }}
@@ -37,7 +39,7 @@ const HomeNavigator = () => {
         name="NewPost"
         component={NewPostScreen}
         options={{
-          tabBarIcon: ({color, size}) => (
+          tabBarIcon: ({color}) => (
             <Icon name="plus-circle-outline" color={color} size={size} />
           ),
         }}
@@ -46,7 +48,7 @@ const HomeNavigator = () => {
         name="Likes"
         component={LikesScreen}
         options={{
-          tabBarIcon: ({color, size}) => (
+          tabBarIcon: ({color}) => (
             <Icon name="heart" color={color} size={size} />
           ),
         }}
@@ -55,7 +57,7 @@ const HomeNavigator = () => {
         name="Profile"
         component={ProfileScreen}
         options={{
-          tabBarIcon: ({color, size}) => (
+          tabBarIcon: ({color}) => (
             <Icon name="account" color={color} size={size} />
           ),
         }}

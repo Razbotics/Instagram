@@ -1,22 +1,24 @@
 import React from 'react';
 import {View, StyleSheet, FlatList} from 'react-native';
 import PostContainer from './PostContainer';
-import {stories} from '../../seed';
+import {getUserFeeds} from '../../api/feeds';
 import StoriesBar from '../stories/StoriesBar';
 
-function Post({}) {
+function Post() {
+  const userFeeds = getUserFeeds();
+
   return (
     <View style={styles.container}>
       <FlatList
-        data={stories}
+        data={userFeeds}
         ListHeaderComponent={() => <StoriesBar />}
-        keyExtractor={(item) => item.id.toString()}
+        keyExtractor={(item) => item.id}
         showsVerticalScrollIndicator={false}
         renderItem={({item}) => (
           <PostContainer
-            profileUri={item.imgUri}
-            name={item.name}
-            postUris={item.postImages}
+            profileUri={item.profileUri}
+            name={item.userName}
+            postUris={item.postUris}
           />
         )}
       />
