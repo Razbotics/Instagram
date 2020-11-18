@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   },
   logoContainer: {
     flex: 5,
-    paddingLeft: 10,
+    paddingLeft: 20,
     justifyContent: 'center',
   },
   logo: {

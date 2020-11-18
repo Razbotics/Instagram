@@ -1,11 +1,21 @@
 import React from 'react';
-import {Text} from 'react-native';
+import ProfileHeader from '../components/profile/ProfileHeader';
+import {getUserById} from '../api/users';
 import Screen from './Screen';
+import ProfileInfo from '../components/profile/ProfileInfo';
 
-function ProfileScreen({}) {
+function ProfileScreen() {
+  const profile = getUserById('1');
   return (
     <Screen>
-      <Text style={{color: 'white'}}>ProfileScreen</Text>
+      <ProfileHeader userName={profile.userName} />
+      <ProfileInfo
+        profileUri={profile.profileUri}
+        name={profile.name}
+        postsLen={profile.posts.length}
+        followers={profile.followers.length}
+        following={profile.following.length}
+      />
     </Screen>
   );
 }
