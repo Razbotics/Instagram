@@ -179,6 +179,34 @@ export const posts = [
       'https:/donewithit.razbotics.com/assets/4e8da1afd32c378854692d4643397b7d_full.jpg',
     ],
   },
+
+  {
+    id: '22',
+    userId: '1',
+    likes: 100,
+    postUris: [
+      'https:/donewithit.razbotics.com/assets/4e8da1afd32c378854692d4643397b7d_full.jpg',
+      'https:/donewithit.razbotics.com/assets/d7ccdb2e21edfc1c264e2d6022551796_full.jpg',
+    ],
+  },
+  {
+    id: '23',
+    userId: '1',
+    likes: 210,
+    postUris: [
+      'https:/donewithit.razbotics.com/assets/e5eeef695d5918e9c1ce59315be21e13_full.jpg',
+      'https:/donewithit.razbotics.com/assets/ab00c8aa0dfb994d75730f051053b612_full.jpg',
+    ],
+  },
+  {
+    id: '24',
+    userId: '1',
+    likes: 150,
+    postUris: [
+      'https:/donewithit.razbotics.com/assets/ab00c8aa0dfb994d75730f051053b612_full.jpg',
+      'https:/donewithit.razbotics.com/assets/4e8da1afd32c378854692d4643397b7d_full.jpg',
+    ],
+  },
 ];
 
 export const getPosts = () => posts;

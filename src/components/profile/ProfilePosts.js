@@ -13,19 +13,19 @@ function ProfilePosts({posts}) {
   );
 }
 
-const imageSize = Dimensions.get('window').width / 3;
+const imageSize = Dimensions.get('window').width * 0.33;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 20,
+    justifyContent: 'center',
+    paddingTop: 50,
     flexDirection: 'row',
     flexWrap: 'wrap',
   },
   imageContainer: {
     width: imageSize,
     height: imageSize,
-    padding: 0.1,
   },
   image: {
     height: '100%',

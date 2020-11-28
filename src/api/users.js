@@ -7,7 +7,7 @@ const users = [
       'https://instagram.fbom2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/119048819_378097930252595_7271537768545590772_n.jpg?_nc_ht=instagram.fbom2-1.fna.fbcdn.net&_nc_ohc=9C9bazw4esMAX_Cr6vd&oh=aff1580df463bb4bfcff5ff6a29de645&oe=5FD33C10',
     following: ['2', '3', '4', '5', '6'],
     followers: ['2'],
-    posts: ['1', '2', '3', '4', '5', '6'],
+    posts: ['1', '2', '3', '4', '5', '6', '22', '23', '24'],
   },
   {
     id: '2',
