@@ -1,9 +1,9 @@
 import React from 'react';
-import {View, StyleSheet, Image} from 'react-native';
+import {StyleSheet, Image} from 'react-native';
 import Swiper from 'react-native-swiper';
 
 function PostImage({imageUris}) {
-  return (
+  return imageUris.length > 1 ? (
     <Swiper
       style={styles.wrapper}
       showsButtons={false}
@@ -15,6 +15,8 @@ function PostImage({imageUris}) {
         <Image key={index} source={{uri}} style={styles.image} />
       ))}
     </Swiper>
+  ) : (
+    <Image source={{uri: imageUris[0]}} style={styles.image} />
   );
 }
 
