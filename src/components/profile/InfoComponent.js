@@ -15,10 +15,11 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginLeft: 10,
+    marginLeft: 5,
+    marginRight: 5,
   },
   label: {
-    fontSize: 17,
+    fontSize: 15,
     fontWeight: 'normal',
   },
   data: {

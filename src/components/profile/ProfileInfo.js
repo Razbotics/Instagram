@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   statusText: {
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: '200',
   },
   statusTextContainer: {
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   editProfile: {
     padding: 5,
     marginTop: 20,
-    width: '100%',
+    width: '95%',
     alignSelf: 'center',
     borderWidth: 1,
     borderColor: colors.gray,

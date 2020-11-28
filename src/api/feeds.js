@@ -4,35 +4,30 @@ import {getPostsById} from './posts';
 const feeds = [
   {
     id: '1',
-    userId: '2',
     postId: '2',
   },
   {
     id: '2',
-    userId: '3',
-    postId: '3',
+    postId: '7',
   },
   {
     id: '3',
-    userId: '4',
-    postId: '4',
+    postId: '10',
   },
   {
     id: '4',
-    userId: '5',
-    postId: '5',
+    postId: '17',
   },
   {
     id: '5',
-    userId: '6',
-    postId: '6',
+    postId: '20',
   },
 ];
 
 export const getUserFeeds = () =>
   feeds.map((feed) => {
     const post = getPostsById(feed.postId);
-    const user = getUserById(feed.userId);
+    const user = getUserById(post.userId);
 
     return {
       id: feed.id,

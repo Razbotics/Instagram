@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Image} from 'react-native';
+import {View, StyleSheet, Image} from 'react-native';
 import Swiper from 'react-native-swiper';
 
 function PostImage({imageUris}) {
@@ -16,7 +16,9 @@ function PostImage({imageUris}) {
       ))}
     </Swiper>
   ) : (
-    <Image source={{uri: imageUris[0]}} style={styles.image} />
+    <View style={styles.container}>
+      <Image source={{uri: imageUris[0]}} style={styles.image} />
+    </View>
   );
 }
 
@@ -28,7 +30,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
-    height: 300,
+    height: '100%',
   },
 });
 
