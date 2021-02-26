@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  View,
-  StyleSheet,
-  Image,
-  Text,
-  TouchableWithoutFeedback,
-} from 'react-native';
+import {View, StyleSheet, Image, TouchableWithoutFeedback} from 'react-native';
 import colors from '../constants/colors';
 import {width} from '../constants/dimension';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
